@@ -1,0 +1,23 @@
+<!-- 주소:호수/파일이름 (포트에 연결된 폴더에 있는 모든 파일에 접근이 가능하다.) -->
+ip:port/form.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form.php 파일로 보내겠다. (action) -->
+    <!-- POST 방식으로 보내겠다. -->
+    <form action="form.php" method="POST">
+        <!-- title이라는 이름으로 보내겠다. send data that is named "title" -->
+        <p><input type="text" name="title" placeholder="TITLE"></p>
+        <!-- url에 name명으로 쿼리스트링 형태가 됨.. -->
+        <p><textarea name="describe"></textarea></p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>
