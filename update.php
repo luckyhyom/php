@@ -48,9 +48,12 @@ function print_content(){
     <a href="./update.php">update</a>
     <?php }?>
 
-    <form action="./create.php" method="post">
-        <input type="text" name="title"></br>
-        <textarea name="description"></textarea>
+    <form action="./update_process.php.php" method="post">
+        <input name="old_title" type="hidden" value="<?php $_GET['id'] ?>">
+        <input type="text" name="title" value="<?php $_GET['id'] ?>"></br>
+        <textarea name="description">
+            <?php file_get_contents($_GET['id'],true); ?>
+        </textarea>
         <input type="submit">
     </form>
 
