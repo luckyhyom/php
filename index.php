@@ -1,11 +1,4 @@
-<?php 
-function print_title(){
-    if(isset($_GET['id'])){ echo $_GET['id']; }else{ echo "WELCOME!";}
-}
-function print_content(){
-    if(isset($_GET['id'])){ echo file_get_contents('./data/'.$_GET['id'],true); }else{ echo "WELCOME!";}
-}
-?>
+<?php require('libs/print.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +9,8 @@ function print_content(){
     <title>Document</title>
 </head>
 <body>
+
+    <?php require('libs/header.php'); ?>
 
     <?php 
     $list = scandir('./data');
@@ -31,7 +26,7 @@ function print_content(){
     ?>
 
     <h2> <?php  print_title(); ?></h2>
-    <h2> <?php  print_content(); ?></h2>
+    
     
 
     <?php 
